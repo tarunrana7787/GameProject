@@ -1,19 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="GameProject.Register" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
-        <div class="row">
+        <div class="container">
             <div class="col-md-offset-4 col-md-4">
-                 <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
+                <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
                     <asp:Label runat="server" ID="StatusLabel" />
                 </div>
 
-                <h1>Register Page</h1>
+                <h1>Registration Page</h1>
                 <h5>All Fields are Required</h5>
                 <br />
-                <div class="panel panel-primary">
+                <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h1 class="panel-title"><i class="fa fa-user-plus fa-lg"></i> Register</h1>
+                        <h1 class="panel-title"><i class="fa fa-registered fa-lg"></i>Registration Form</h1>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
@@ -39,7 +37,7 @@
                         <div class="form-group">
                             <label class="control-label" for="ConfirmPasswordTextBox">Confirm:</label>
                             <asp:TextBox runat="server" TextMode="Password" CssClass="form-control" ID="ConfirmPasswordTextBox" placeholder="Confirm Password" required="true" TabIndex="0"></asp:TextBox>
-                            <asp:CompareValidator ErrorMessage="Your Passwords Must Match" Type="String" Operator="Equal"  ControlToValidate="ConfirmPasswordTextBox" runat="server"
+                            <asp:CompareValidator ErrorMessage="Your Passwords Must Match" Type="String" Operator="Equal" ControlToValidate="ConfirmPasswordTextBox" runat="server"
                                 ControlToCompare="PasswordTextBox" CssClass="label label-danger" />
                         </div>
 
@@ -48,9 +46,7 @@
                             <asp:Button Text="Register" ID="RegisterButton" runat="server" CssClass="btn btn-primary" OnClick="RegisterButton_Click" TabIndex="0" />
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
-
-    </div>
-</asp:Content>
+    </asp:Content>
